@@ -35,7 +35,7 @@ const unorderedListElement = document.querySelector(".shopping")
 function populateList(list)
 {
 for (let i = 0; i < list.length; i++) {
-    console.log(list[i])
+    // console.log(list[i])
     const listItemElement = document.createElement("li");
     listItemElement.textContent = list[i];
     unorderedListElement.appendChild(listItemElement);
@@ -43,3 +43,12 @@ for (let i = 0; i < list.length; i++) {
 };
 let shoppingList = ["cheese","bread","green pepper"];
 populateList(shoppingList);
+
+function changeListStyle ()
+{
+    unorderedListElement.classList.add("squareList");
+    unorderedListElement.classList.remove("circleList");
+
+    // unorderedListElement.classList.replace("circleList", "squareList")
+}
+changeListStyle()
