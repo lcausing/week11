@@ -41,7 +41,7 @@ for (let i = 0; i < list.length; i++) {
     unorderedListElement.appendChild(listItemElement);
 };
 };
-let shoppingList = ["cheese","bread","green pepper"];
+let shoppingList = ["cheese","bread","green pepper","green potato"];
 populateList(shoppingList);
 
 function changeListStyle ()
@@ -64,3 +64,17 @@ function updateImage()
 }   
 
 updateImage()
+
+function colorTextToGreen(){
+    const textElement = document.querySelectorAll(".shopping li");
+    console.log(textElement);
+    for (let i = 0; i < textElement.length; i++) 
+    {
+    //  console.log(textElement[i]);   
+        if (textElement[i].textContent.includes("green")){
+            textElement[i].classList.add("greenText");
+            // textElement.color = "greentext"
+        }
+    };
+}
+colorTextToGreen();
